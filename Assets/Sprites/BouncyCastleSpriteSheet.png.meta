@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 41e49ea818c887a46a40d5541fe6e5b8
+guid: 95cce708b7c51c740a4253befa77adda
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6446950131703598604
     second: BouncyCastleSpriteSheet_0
+  - first:
+      213: -2216016952306106786
+    second: BouncyCastleSpriteSheet_1
+  - first:
+      213: 1717869882231161335
+    second: BouncyCastleSpriteSheet_2
+  - first:
+      213: 2863168797911216831
+    second: BouncyCastleSpriteSheet_3
+  - first:
+      213: -6603797524276475487
+    second: BouncyCastleSpriteSheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,8 +128,8 @@ TextureImporter:
       name: BouncyCastleSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 3242
+        x: 125
+        y: 3184
         width: 186
         height: 793
       alignment: 0
@@ -130,6 +142,94 @@ TextureImporter:
       bones: []
       spriteID: 4f1362b3305d786a0800000000000000
       internalID: -6446950131703598604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouncyCastleSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 3210
+        width: 790
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5efc85a2502f31e0800000000000000
+      internalID: -2216016952306106786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouncyCastleSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 3603
+        width: 485
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f10bb46e8917d710800000000000000
+      internalID: 1717869882231161335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouncyCastleSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 203
+        height: 3073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2fa7b1ad40cb720800000000000000
+      internalID: 2863168797911216831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouncyCastleSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 0
+        width: 1547
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a985ecd3299a54a0800000000000000
+      internalID: -6603797524276475487
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BouncyCastleSpriteSheet_0: -6446950131703598604
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
