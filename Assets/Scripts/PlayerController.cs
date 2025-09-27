@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(attackHold);
         yield return RotateZ(_weapon, 0f, returnTime);
 
-        _weapon.GetComponent<Collider2D>().enabled = true;
+        _weapon.GetComponent<Collider2D>().enabled = false;
     }
 
     IEnumerator RotateZ(Transform t, float toZ, float dur)

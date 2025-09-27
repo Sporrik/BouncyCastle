@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 5847011396878265025}
   m_Layer: 0
   m_Name: weapon
-  m_TagString: Untagged
+  m_TagString: Harm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +319,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8447288114728315139}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 3e84d56e0a96e744bbf4db24e88145a6, type: 2}
