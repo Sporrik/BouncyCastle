@@ -50,11 +50,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
-  _groundCheckRadius: 0
-  _groundCheck: {fileID: 0}
   _diveMultiplier: 4
   _attackRate: 0.3
   _weapon: {fileID: 3012757866992422705}
+  swingTime: 0.05
+  returnTime: 0.05
+  attackHold: 0.1
+  sr: {fileID: 9135737299534904561}
 --- !u!114 &3933611929400683656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +146,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -301,7 +303,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -6446950131703598604, guid: 95cce708b7c51c740a4253befa77adda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

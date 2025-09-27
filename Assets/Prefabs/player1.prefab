@@ -50,11 +50,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
-  _groundCheckRadius: 0
-  _groundCheck: {fileID: 0}
   _diveMultiplier: 4
   _attackRate: 0.3
   _weapon: {fileID: 3012757866992422705}
+  swingTime: 0.05
+  returnTime: 0.05
+  attackHold: 0.1
+  sr: {fileID: 9135737299534904561}
 --- !u!114 &6636756078090658004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,8 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bb95f5dd0b104438dc65233ae297b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerScript: {fileID: 7761986102859666254}
-  _moveAction: {fileID: -5552795264491624591, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  playerScript: {fileID: 0}
+  move: {fileID: 0}
+  attack: {fileID: 0}
+  dive: {fileID: 0}
 --- !u!50 &7055330458142739114
 Rigidbody2D:
   serializedVersion: 5

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] _scoreText;
     public int[] scoreArr = new int[2];
 
+    [SerializeField] private TextMeshProUGUI[] _endText;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -28,6 +30,13 @@ public class GameManager : MonoBehaviour
         scoreArr[teamID]++;
         _scoreText[teamID].text = scoreArr[teamID].ToString();
 
-        SpawnBall();
+        if (scoreArr[teamID] > 2)
+        {
+            _endText[teamID].gameObject.SetActive(true);
+        }
+        else
+        {
+            SpawnBall();
+        }
     }
 }

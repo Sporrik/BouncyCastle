@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _attackRate;
     [SerializeField] private Transform _weapon;
 
+    [SerializeField] float swingTime, returnTime, attackHold;
+    [SerializeField] SpriteRenderer sr;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -46,16 +49,35 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
-        _rb.gravityScale = _isDiving ? _diveMultiplier : 1f;
+        _rb.gravityScale = _isDiving ? _diveMultiplier : 4f;
         _rb.linearVelocity = new Vector2(_direction.x * _moveSpeed, _rb.linearVelocity.y);
     }
 
-    private IEnumerator StartAttack()
+    int FacingSign => (sr && sr.flipX) || transform.localScale.x < 0f ? -1 : 1;
+
+    IEnumerator StartAttack()
     {
-        _weapon.localRotation = Quaternion.Euler(0f, 0f, transform.eulerAngles.z - 145f + 75f);
+        float poseZ = transform.eulerAngles.z - 145f + 75f;
+        float targetZ = FacingSign * poseZ;
 
-        yield return new WaitForSeconds(_attackRate);
-
-        _weapon.localRotation = Quaternion.identity;
+        yield return RotateZ(_weapon, targetZ, swingTime);
+        yield return new WaitForSeconds(attackHold);
+        yield return RotateZ(_weapon, 0f, returnTime);
     }
+
+    IEnumerator RotateZ(Transform t, float toZ, float dur)
+    {
+        float fromZ = t.localEulerAngles.z;
+        float tAcc = 0f;
+        while (tAcc < dur)
+        {
+            tAcc += Time.deltaTime;
+            float s = Mathf.Clamp01(tAcc / dur);
+            float z = Mathf.LerpAngle(fromZ, toZ, s);
+            t.localRotation = Quaternion.Euler(0f, 0f, z);
+            yield return null;
+        }
+        t.localRotation = Quaternion.Euler(0f, 0f, toZ);
+    }
+
 }
