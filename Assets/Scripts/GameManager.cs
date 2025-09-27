@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         SpawnBall();
     }
 
-    private void SpawnBall()
+    public void SpawnBall()
     {
         Instantiate(_ballPrefab, _ballSpawnPoint);
     }
