@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BouncyCastleSpriteSheet_0: -6446950131703598604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
