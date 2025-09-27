@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-
 public class Ball : MonoBehaviour
 {
     private int _hp = 5;
@@ -8,7 +7,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Harm"))
+        if (collision.collider.CompareTag("Harm"))
         {
             _hp--;
             _hpText.text = _hp.ToString();

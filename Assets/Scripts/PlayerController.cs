@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float _attackRate;
     [SerializeField] private Transform _weapon;
+    [SerializeField] private Transform _attackPoint;
+    [SerializeField] private Transform _attackPoint1;
+    [SerializeField] private Transform _attackPoint2;
 
     [SerializeField] float swingTime, returnTime, attackHold;
     [SerializeField] SpriteRenderer sr;
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement();
+        UpdateFacing();
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -52,6 +56,23 @@ public class PlayerController : MonoBehaviour
         _rb.gravityScale = _isDiving ? _diveMultiplier : 4f;
         _rb.linearVelocity = new Vector2(_direction.x * _moveSpeed, _rb.linearVelocity.y);
     }
+
+    private void UpdateFacing()
+    {
+        if (Mathf.Abs(_direction.x) < 0.001f) return;
+        
+        sr.flipX = _direction.x < 0f;
+
+        if (sr.flipX)
+        {
+            _attackPoint.localPosition = new Vector3(_attackPoint2.position.x, -0.51f, 0f);
+        }
+        else
+        {
+            _attackPoint.localPosition = new Vector3(_attackPoint1.position.x, -0.51f, 0f);
+        } 
+    }
+
 
     int FacingSign => (sr && sr.flipX) || transform.localScale.x < 0f ? -1 : 1;
 
@@ -83,5 +104,4 @@ public class PlayerController : MonoBehaviour
         }
         t.localRotation = Quaternion.Euler(0f, 0f, toZ);
     }
-
 }
