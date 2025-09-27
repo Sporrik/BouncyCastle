@@ -6,13 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _groundCheckRadius;
-    [SerializeField] private Transform _groundCheck;
-
     [SerializeField] private float _diveMultiplier;
     private bool _isDiving;
 
-    private PlayerInput _playerInput;
     private Rigidbody2D _rb;
     private Vector2 _direction;
     private Vector2 _input;
@@ -22,7 +18,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -44,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
+        if (!context.performed) return;
 
         StartCoroutine(StartAttack());
     }
