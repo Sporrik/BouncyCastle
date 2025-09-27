@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         scoreArr[teamID]++;
         _scoreText[teamID].text = scoreArr[teamID].ToString();
 
-        if (scoreArr[teamID] > 2)
+        if (scoreArr[teamID] > 4)
         {
             _endText[teamID].gameObject.SetActive(true);
         }
