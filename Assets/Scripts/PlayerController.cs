@@ -57,12 +57,16 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StartAttack()
     {
+        _weapon.GetComponent<Collider2D>().enabled = true;
+
         float poseZ = transform.eulerAngles.z - 145f + 75f;
         float targetZ = FacingSign * poseZ;
 
         yield return RotateZ(_weapon, targetZ, swingTime);
         yield return new WaitForSeconds(attackHold);
         yield return RotateZ(_weapon, 0f, returnTime);
+
+        _weapon.GetComponent<Collider2D>().enabled = true;
     }
 
     IEnumerator RotateZ(Transform t, float toZ, float dur)
