@@ -221,7 +221,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,9 +415,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1536
+        y: 1660
         width: 512
-        height: 512
+        height: 274
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,9 +437,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1536
+        y: 1664
         width: 512
-        height: 512
+        height: 266
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,9 +459,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1536
+        y: 1666
         width: 512
-        height: 512
+        height: 264
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,12 +700,12 @@ TextureImporter:
       name: BouncyCastleSpriteSheet_26
       rect:
         serializedVersion: 2
-        x: 0
+        x: 196
         y: 0
-        width: 512
+        width: 106
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -727,7 +727,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
