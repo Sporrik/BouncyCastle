@@ -65,11 +65,11 @@ public class PlayerController : MonoBehaviour
 
         if (sr.flipX)
         {
-            _attackPoint.localPosition = new Vector3(_attackPoint2.position.x, -0.51f, 0f);
+            _attackPoint.localPosition = new Vector3(_attackPoint2.localPosition.x, -0.51f, 0f);
         }
         else
         {
-            _attackPoint.localPosition = new Vector3(_attackPoint1.position.x, -0.51f, 0f);
+            _attackPoint.localPosition = new Vector3(_attackPoint1.localPosition.x, -0.51f, 0f);
         } 
     }
 
